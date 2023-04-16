@@ -23,11 +23,11 @@ export interface IPost {
 const Post = ({ post }: { post: IPost }) => (
   <>
     <Head>
-      <title>Unie - {post.slug.current}</title>
+      {/* <title>Unie - {post.slug.current}</title> */}
     </Head>
 
     <div className="container">
-      <h2 className={styles.title}>{post.title}</h2>
+      {/* <h2 className={styles.title}>{post.title}</h2>
       <p className={styles.date}>{post.publishedAt}</p>
       <Image
         src={urlFor(post.mainImage).url()}
@@ -39,32 +39,36 @@ const Post = ({ post }: { post: IPost }) => (
           height: 'auto',
         }}
       />
-      <PortableText value={post.body} />
+      <PortableText value={post.body} /> */}
     </div>
   </>
 );
 
-export const getStaticPaths = async () => {
-  const query = `*[type == "post"] { slug { current } }`;
+// Temporary hide Sanity part
 
-  const posts = await client.fetch(query);
-  const paths = posts.map((post: IPost) => {
-    {
-      post.slug.current;
-    }
-  });
+// export const getStaticPaths = async () => {
+//   const query = `*[type == "post"] { slug { current } }`;
 
-  return { paths, fallback: 'blocking' };
-};
+//   const posts = await client.fetch(query);
+//   const paths = posts.map((post: IPost) => {
+//     {
+//       post.slug.current;
+//     }
+//   });
 
-export const getStaticProps = async ({ params: { slug } }: { params: { slug: string } }) => {
-  const query = `*[_type == "post" && slug.current == '${slug}'][0]{body, publishedAt, mainImage, slug, title}`;
+//   return { paths, fallback: 'blocking' };
+// };
 
-  const post = await client.fetch(query);
+// Temporary hide Sanity part
 
-  return {
-    props: { post },
-  };
-};
+// export const getStaticProps = async ({ params: { slug } }: { params: { slug: string } }) => {
+//   const query = `*[_type == "post" && slug.current == '${slug}'][0]{body, publishedAt, mainImage, slug, title}`;
+
+//   const post = await client.fetch(query);
+
+//   return {
+//     props: { post },
+//   };
+// };
 
 export default Post;
