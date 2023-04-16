@@ -1,10 +1,6 @@
 import Head from 'next/head';
 
-import { client } from '@/lib/client';
-
 import type { IPost } from './post/[slug]';
-
-import Link from 'next/link';
 
 interface IProps {
   posts: IPost[];
@@ -17,7 +13,8 @@ const Posts = ({ posts }: IProps) => (
       <title>Unie - Новости</title>
     </Head>
 
-    <section className='container'>
+    {/* Temporary hide Sanity part */}
+    {/* <section className='container'>
       {posts.map(post => {
         return (
           <div key={post._id}>
@@ -30,22 +27,24 @@ const Posts = ({ posts }: IProps) => (
           </div>
         );
       })}
-    </section>
+    </section> */}
   </>
 );
 
 export default Posts;
 
-export const getStaticProps = async () => {
-  const query = `{
-    "posts": *[_type == "post"] | order(publishedAt desc)  {_id, publishedAt, title, description, mainImage, slug},
-  }`;
-  const { posts: result } = await client.fetch(query);
+// Temporary hide Sanity part
 
-  const posts = result.map((post: IPost) => ({
-    ...post,
-    publishedAt: new Date(post.publishedAt).toLocaleString('default', { month: 'short', day: 'numeric' })
-  }));
+// export const getStaticProps = async () => {
+//   const query = `{
+//     "posts": *[_type == "post"] | order(publishedAt desc)  {_id, publishedAt, title, description, mainImage, slug},
+//   }`;
+//   const { posts: result } = await client.fetch(query);
 
-  return { props: { posts } };
-};
+//   const posts = result.map((post: IPost) => ({
+//     ...post,
+//     publishedAt: new Date(post.publishedAt).toLocaleString('default', { month: 'short', day: 'numeric' })
+//   }));
+
+//   return { props: { posts } };
+// };
