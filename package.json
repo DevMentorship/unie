@@ -16,15 +16,6 @@
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
     "postinstall": "husky install"
   },
-  "lint-staged": {
-    "./src/**/*.{ts,js,jsx,tsx}": [
-      "eslint --ignore-path .gitignore",
-      "prettier --ignore-path .gitignore --write"
-    ],
-    "**/*.css": [
-      "stylelint"
-    ]
-  },
   "dependencies": {
     "@portabletext/react": "^2.0.2",
     "@sanity/client": "^5.4.1",
