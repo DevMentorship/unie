@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 import { client } from '@/lib/client';
 import { urlFor } from '@/lib/client';
+
 import styles from './post.module.css';
 
 export interface IPost {
@@ -22,9 +23,7 @@ export interface IPost {
 
 const Post = ({ post }: { post: IPost }) => (
   <>
-    <Head>
-      {/* <title>Unie - {post.slug.current}</title> */}
-    </Head>
+    <Head>{/* <title>Unie - {post.slug.current}</title> */}</Head>
 
     <div className="container">
       {/* <h2 className={styles.title}>{post.title}</h2>

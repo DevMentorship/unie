@@ -5,7 +5,7 @@ import styles from '@/components/Header/Header.module.css';
 const pages = [
   { label: 'Новости', href: '/posts' },
   { label: 'UNIE', href: '/' },
-  { label: 'Меню', href: '/menu' }
+  { label: 'Меню', href: '/menu' },
 ];
 
 export const Header = () => {
