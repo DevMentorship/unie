@@ -1,7 +1,7 @@
-/* eslint-disable simple-import-sort/imports */
-import { Advantages } from '@/components/Advantages/Advantages';
 import Head from 'next/head';
 import Image from 'next/image';
+
+import { Advantages } from '@/components/Advantages/Advantages';
 
 export default function Home() {
   return (
