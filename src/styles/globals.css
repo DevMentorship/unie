@@ -13,6 +13,8 @@ a {
     Droid Sans,
     Helvetica Neue,
     sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.2;
 }
 
 html {
@@ -22,6 +24,22 @@ html {
 
 main {
   margin: 0 0 150px;
+}
+
+.heading1 {
+  font-size: 3.2rem;
+}
+
+.heading2 {
+  font-size: 2.4rem;
+}
+
+.paragraph2 {
+  font-size: 1.4rem;
+}
+
+.bold {
+  font-weight: 700;
 }
 
 .visually-hidden {
@@ -36,9 +54,9 @@ main {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1200px;
   padding: 0 15px;
-  margin: 0 auto;
+  margin: 0 auto 100px;
 }
 
 .hero {

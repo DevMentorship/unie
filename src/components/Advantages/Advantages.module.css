@@ -1,0 +1,23 @@
+.blocks {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .blocks {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .blocks {
+    flex-direction: column;
+  }
+}
+
+.block {
+  max-width: 300px;
+}

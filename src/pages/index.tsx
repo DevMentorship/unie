@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
 
+import { Advantages } from '@/components/Advantages/Advantages';
+
 export default function Home() {
   return (
     <>
@@ -15,6 +17,8 @@ export default function Home() {
       <section className="gallery container">
         <Image className="gallery__image image" src="/unie-photo.jpg" alt="flip animation" width={1280} height={1280} />
       </section>
+
+      <Advantages />
     </>
   );
 }
