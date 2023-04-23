@@ -13,6 +13,8 @@ a {
     Droid Sans,
     Helvetica Neue,
     sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.2;
 }
 
 html {
@@ -24,34 +26,20 @@ main {
   margin: 0 0 150px;
 }
 
-h1 {
-  font-size: 32px;
+.heading1 {
+  font-size: 3.2rem;
+}
+
+.heading2 {
+  font-size: 2.4rem;
+}
+
+.paragraph2 {
+  font-size: 1.4rem;
+}
+
+.bold {
   font-weight: 700;
-  line-height: 44px;
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 33px;
-}
-
-h3 {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-}
-
-h4 {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 19px;
-}
-
-h5 {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 16px;
 }
 
 .visually-hidden {
@@ -66,9 +54,9 @@ h5 {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1200px;
   padding: 0 15px;
-  margin: 0 auto;
+  margin: 0 auto 100px;
 }
 
 .hero {
