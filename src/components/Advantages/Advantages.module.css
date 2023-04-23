@@ -1,12 +1,8 @@
 .blocks {
   display: flex;
+  gap: 60px;
   align-items: center;
   justify-content: center;
   margin-bottom: 60px;
   text-align: center;
-}
-
-.blocks_item {
-  display: block;
-  margin-left: 60px;
 }
