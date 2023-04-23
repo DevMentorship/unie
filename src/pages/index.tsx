@@ -1,3 +1,5 @@
+/* eslint-disable simple-import-sort/imports */
+import { Advantages } from '@/components/Advantages/Advantages';
 import Head from 'next/head';
 import Image from 'next/image';
 
@@ -14,6 +16,9 @@ export default function Home() {
       </section>
       <section className="gallery container">
         <Image className="gallery__image image" src="/unie-photo.jpg" alt="flip animation" width={1280} height={1280} />
+      </section>
+      <section>
+        <Advantages />
       </section>
     </>
   );

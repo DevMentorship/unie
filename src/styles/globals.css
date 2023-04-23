@@ -24,6 +24,62 @@ main {
   margin: 0 0 150px;
 }
 
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 33px;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+h5 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19px;
+}
+
+h6 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+/* h7 {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+h8 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+} */
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+
+/* --------------------------------------------------- */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -60,6 +116,8 @@ main {
   animation: flip-animation 12s linear infinite, fade-in 1s ease-in-out forwards;
   transform-style: preserve-3d;
 }
+
+/* --------------------------------------------------- */
 
 @keyframes flip-animation {
   0% {

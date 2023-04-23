@@ -1,0 +1,16 @@
+.advantages {
+  display: block;
+  margin: 0 auto;
+}
+
+.block {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.block2 {
+  display: block;
+  margin-left: 60px;
+}
