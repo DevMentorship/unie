@@ -8,14 +8,12 @@ const pages = [
   { label: 'Меню', href: '/menu' },
 ];
 
-export const Header = () => {
-  return (
-    <header className={styles.header}>
-      {pages.map(({ label, href }, index) => (
-        <Link href={href} key={index} className={styles.link}>
-          {label}
-        </Link>
-      ))}
-    </header>
-  );
-};
+export const Header = () => (
+  <header className={styles.header}>
+    {pages.map(({ label, href }, index) => (
+      <Link href={href} key={index} className={styles.link}>
+        {label}
+      </Link>
+    ))}
+  </header>
+);
