@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 import { Advantages } from '@/components/Advantages/Advantages';
+import { Team } from '@/components/Team/Team';
 
 export default function Home() {
   return (
@@ -19,6 +20,8 @@ export default function Home() {
       </section>
 
       <Advantages />
+
+      <Team />
     </>
   );
 }
