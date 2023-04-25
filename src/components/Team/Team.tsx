@@ -1,8 +1,4 @@
-import Image from 'next/image';
-
-import styles from '@/components/Team/Team.module.css';
-
-import { Slider } from '../Slider/Slider';
+import { Slider } from '@/components/Slider/Slider';
 
 export const Team = () => (
   <section className="container">

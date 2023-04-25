@@ -18,12 +18,7 @@
   object-fit: cover;
 }
 
-.team {
-  position: relative;
-  height: 100%;
+/* stylelint-disable selector-pseudo-class-no-unknown */
+.slider :global(.swiper-slide) {
+  text-align: center;
 }
-
-.team_blocks {
-  margin-right: 50px;
-}
-
