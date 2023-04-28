@@ -86,18 +86,19 @@
 .socials {
   position: absolute;
   top: 32%;
-  right: -70%;
+  right: -75%;
   display: none;
+  cursor: pointer;
 }
 
 :global(.swiper-slide-active) .socials {
   display: block;
 }
 
-.button {
-  padding: 5px;
+.icons {
   margin: 5px;
-  color: #efe6dd;
   cursor: pointer;
-  background: #353432;
+  background: none;
+  border: none;
+  border-radius: 50%;
 }
