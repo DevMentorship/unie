@@ -67,11 +67,14 @@
   transform: scale(1.2);
 }
 
-.name {
+.info {
   position: absolute;
   top: 16%;
   right: -69%;
   display: none;
+}
+
+.name {
   max-width: 100%;
   font-size: 24px;
   font-weight: 700;
@@ -79,20 +82,12 @@
   color: #000000;
 }
 
-:global(.swiper-slide-active) .name {
+:global(.swiper-slide-active) .info {
   display: block;
 }
 
-.socials {
-  position: absolute;
-  top: 30%;
-  right: -110%;
-  display: none;
-  cursor: pointer;
-}
-
-:global(.swiper-slide-active) .socials {
-  display: block;
+.slider :global(.swiper-slide-active) {
+  z-index: 1;
 }
 
 .icons {

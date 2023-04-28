@@ -84,16 +84,19 @@ export const Slider = () => {
           <div className={styles.image}>
             <Image src={slide.photo} alt={slide.name} width={270} height={360} />
           </div>
-          <h4 className={styles.name}>{slide.name}</h4>
 
-          <div className={styles.socials}>
-            <button className={styles.icons}>
-              <Image src="/vk.svg" className={styles.button} alt={''} width={40} height={40} />
-            </button>
+          <div className={styles.info}>
+            <h4 className={styles.name}>{slide.name}</h4>
 
-            <button className={styles.icons}>
-              <Image src="/instagram.svg" className={styles.button} alt={''} width={40} height={40} />
-            </button>
+            <div className={styles.socials}>
+              <button className={styles.icons}>
+                <Image src="/vk.svg" className={styles.button} alt={''} width={40} height={40} />
+              </button>
+
+              <button className={styles.icons}>
+                <Image src="/instagram.svg" className={styles.button} alt={''} width={40} height={40} />
+              </button>
+            </div>
           </div>
 
           <p className={styles.description}>{slide.description}</p>
