@@ -85,8 +85,8 @@
 
 .socials {
   position: absolute;
-  top: 32%;
-  right: -75%;
+  top: 30%;
+  right: -110%;
   display: none;
   cursor: pointer;
 }
