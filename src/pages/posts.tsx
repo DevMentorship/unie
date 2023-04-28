@@ -1,5 +1,7 @@
 import Head from 'next/head';
 
+import { Cards } from '@/components/Cards/Cards';
+
 import type { IPost } from './post/[slug]';
 
 interface IProps {
@@ -12,6 +14,8 @@ const Posts = ({ posts }: IProps) => (
     <Head>
       <title>Unie - Новости</title>
     </Head>
+
+    <Cards />
 
     {/* Temporary hide Sanity part */}
     {/* <section className='container'>
