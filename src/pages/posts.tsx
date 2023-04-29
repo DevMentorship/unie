@@ -1,11 +1,10 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-import { NewsMenu } from '@/components/NewsMenu/NewsMenu';
-import { IMenu } from '@/components/NewsMenu/NewsMenu.interface';
-import { client } from '@/lib/client';
-
-import type { IPost } from '@/post/[slug]';
+import { NewsMenu } from '../components/NewsMenu/NewsMenu';
+import { IMenu } from '../components/NewsMenu/NewsMenu.interface';
+import { client } from '../lib/client';
+import type { IPost } from './post/[slug]';
 
 const Posts = ({ posts, menus }: { posts: IPost[]; menus: IMenu[] }) => (
   <>
