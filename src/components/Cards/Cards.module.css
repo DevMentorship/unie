@@ -1,20 +1,31 @@
 .cardsBlock {
-  display: block;
+  display: inline-block;
 }
 
-.cardColumn {
+.cardsBlock {
   box-sizing: border-box;
-  width: 50%;
-  padding: 4%;
-}
-
-.card {
-  position: relative;
-  display: block;
+  display: inline-block;
   align-items: center;
+  justify-content: center;
+  margin: 63px 25px 20px 23px;
   text-align: center;
 }
 
-.column1 {
-  padding-top: 100px;
+.cardColumn2 {
+  padding-top: 50px;
 }
+
+/* .cardColumn1{
+  display: inline-block;
+  padding-top: 50px;
+}
+.cardColumn2{
+  display: inline-block;
+  margin-bottom: 50px;
+}
+.cardColumn3{
+  display: inline-block;
+}
+.cardColumn4{
+  display: inline-block;
+} */

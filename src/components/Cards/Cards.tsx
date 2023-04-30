@@ -17,21 +17,48 @@ export const Cards = () => (
     <div className={styles.cardsBlock}>
       <h2 className="heading2">Другие новости</h2>
 
-      <div className={cn(styles.cardColumn)}>
+      <div className={styles.cardColumn1}>
         <div className={styles.card}>
           <Image className={styles.img} src={'/matcha.jpg'} alt={''} width={210} height={280} />
-          <p>Матча или маття </p>
+          <h2>Матча или маття </h2>
         </div>
         <div className={styles.card}>
           <Image className={styles.img} src={'/matcha.jpg'} alt={''} width={210} height={280} />
-          <p>Матча или маття </p>
+          <h2>Матча или маття </h2>
         </div>
       </div>
 
-      <div className={cn(styles.cardColumn, styles.column1)}>
+      <div className={styles.cardColumn2}>
         <div className={styles.card}>
           <Image className={styles.img} src={'/matcha.jpg'} alt={''} width={210} height={280} />
-          <p>Матча или маття </p>
+          <h2>Матча или маття </h2>
+        </div>
+
+        <div className={styles.card}>
+          <Image className={styles.img} src={'/matcha.jpg'} alt={''} width={210} height={280} />
+          <h2>Матча или маття </h2>
+        </div>
+      </div>
+      <div className={styles.cardColumn3}>
+        <div className={styles.card}>
+          <Image className={styles.img} src={'/matcha.jpg'} alt={''} width={210} height={280} />
+          <h2>Матча или маття </h2>
+        </div>
+
+        <div className={styles.card}>
+          <Image className={styles.img} src={'/matcha.jpg'} alt={''} width={210} height={280} />
+          <h2>Матча или маття </h2>
+        </div>
+      </div>
+      <div className={styles.cardColumn4}>
+        <div className={styles.card}>
+          <Image className={styles.img} src={'/matcha.jpg'} alt={''} width={210} height={280} />
+          <h2>Матча или маття </h2>
+        </div>
+
+        <div className={styles.card}>
+          <Image className={styles.img} src={'/matcha.jpg'} alt={''} width={210} height={280} />
+          <h2>Матча или маття </h2>
         </div>
       </div>
     </div>
