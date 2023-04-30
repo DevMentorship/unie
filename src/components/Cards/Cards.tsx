@@ -28,7 +28,7 @@ export const Cards = () => (
         </div>
       </div>
 
-      <div className={cn(styles.cardColumn, styles.column1)}>
+      <div className={styles.cardColumn}>
         <div className={styles.card}>
           <Image className={styles.img} src={'/cans.jpg'} alt={''} width={210} height={280} />
           <h2>Потенциально опасный контент 18+</h2>
