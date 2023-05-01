@@ -14,10 +14,10 @@ export const Cards = () => (
   // ];
 
   <section className="container">
-    <div className={styles.cardsBlock}>
+    <div className={styles.block}>
       <h2 className="heading2">Другие новости</h2>
-      <div className={styles.cardColumn}>
-        <div className={cn(styles.cardColumn1)}>
+      <div className={styles.columns}>
+        <div className={cn(styles.column1)}>
           <div className={styles.card}>
             <Image className={styles.img} src={'/matcha.jpg'} alt={''} width={210} height={280} />
             <h3>Матча или маття</h3>
@@ -28,7 +28,7 @@ export const Cards = () => (
           </div>
         </div>
 
-        <div className={styles.cardColumn2}>
+        <div className={styles.column2}>
           <div className={styles.card}>
             <Image className={styles.img} src={'/cans.jpg'} alt={''} width={210} height={280} />
             <h3>Потенциально опасный контент 18+</h3>
@@ -38,7 +38,7 @@ export const Cards = () => (
             <h3>Суп дня</h3>
           </div>
         </div>
-        <div className={styles.cardColumn3}>
+        <div className={styles.column3}>
           <div className={styles.card}>
             <Image className={styles.img} src={'/vacancy.jpg'} alt={''} width={210} height={280} />
             <h3>Открытые вакансии</h3>
@@ -48,7 +48,7 @@ export const Cards = () => (
             <h3>Холодные напитки</h3>
           </div>
         </div>
-        <div className={styles.cardColumn4}>
+        <div className={styles.column4}>
           <div className={styles.card}>
             <Image className={styles.img} src={'/coffee.jpg'} alt={''} width={210} height={280} />
             <h3>Дрип-кофе</h3>
