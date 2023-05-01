@@ -16,26 +16,47 @@ export const Cards = () => (
   <section className="container">
     <div className={styles.cardsBlock}>
       <h2 className="heading2">Другие новости</h2>
-
-      <div className={cn(styles.cardColumn)}>
-        <div className={styles.card}>
-          <Image className={styles.img} src={'/matcha.jpg'} alt={''} width={210} height={280} />
-          <h2>Матча или маття</h2>
-        </div>
-        <div className={styles.card}>
-          <Image className={styles.img} src={'/english.jpg'} alt={''} width={210} height={280} />
-          <h2>English clubs</h2>
-        </div>
-      </div>
-
       <div className={styles.cardColumn}>
-        <div className={styles.card}>
-          <Image className={styles.img} src={'/cans.jpg'} alt={''} width={210} height={280} />
-          <h2>Потенциально опасный контент 18+</h2>
+        <div className={cn(styles.cardColumn1)}>
+          <div className={styles.card}>
+            <Image className={styles.img} src={'/matcha.jpg'} alt={''} width={210} height={280} />
+            <h3>Матча или маття</h3>
+          </div>
+          <div className={styles.card}>
+            <Image className={styles.img} src={'/english.jpg'} alt={''} width={210} height={280} />
+            <h3>English clubs</h3>
+          </div>
         </div>
-        <div className={styles.card}>
-          <Image className={styles.img} src={'/soup.jpg'} alt={''} width={210} height={280} />
-          <h2>Суп дня</h2>
+
+        <div className={styles.cardColumn2}>
+          <div className={styles.card}>
+            <Image className={styles.img} src={'/cans.jpg'} alt={''} width={210} height={280} />
+            <h3>Потенциально опасный контент 18+</h3>
+          </div>
+          <div className={styles.card}>
+            <Image className={styles.img} src={'/soup.jpg'} alt={''} width={210} height={280} />
+            <h3>Суп дня</h3>
+          </div>
+        </div>
+        <div className={styles.cardColumn3}>
+          <div className={styles.card}>
+            <Image className={styles.img} src={'/vacancy.jpg'} alt={''} width={210} height={280} />
+            <h3>Открытые вакансии</h3>
+          </div>
+          <div className={styles.card}>
+            <Image className={styles.img} src={'/drinks.jpg'} alt={''} width={210} height={280} />
+            <h3>Холодные напитки</h3>
+          </div>
+        </div>
+        <div className={styles.cardColumn4}>
+          <div className={styles.card}>
+            <Image className={styles.img} src={'/coffee.jpg'} alt={''} width={210} height={280} />
+            <h3>Дрип-кофе</h3>
+          </div>
+          <div className={styles.card}>
+            <Image className={styles.img} src={'/breakfast.jpg'} alt={''} width={210} height={280} />
+            <h3>Завтраки</h3>
+          </div>
         </div>
       </div>
     </div>

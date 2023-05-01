@@ -1,16 +1,44 @@
 .cardsBlock {
-  display: flex;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   margin-top: 100px;
 }
 
+.cardsBlock h2 {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  text-align: center;
+}
+
 .cardColumn {
-  box-sizing: border-box;
-  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   padding-top: 60px;
+  padding-bottom: 10px;
+  text-align: center;
 }
 
 .card {
   position: relative;
-  align-items: center;
+  margin: 0 20px 20px;
   text-align: center;
+}
+
+.card h3 {
+  position: absolute;
+  bottom: -15px;
+  align-items: center;
+  width: 210px;
+  height: 76px;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+  background: rgba(53, 52, 50, .6);
+  border-radius: 0 0 15px 15px;
 }
