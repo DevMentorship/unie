@@ -1,4 +1,4 @@
-.block {
+/* .block {
   display: block;
   align-items: center;
   justify-content: center;
@@ -40,10 +40,46 @@
   text-align: center;
   background: rgba(53, 52, 50, .6);
   border-radius: 0 0 15px 15px;
+} */
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 0 auto;
+  color: #ffffff;
+  text-align: center;
 }
 
-@media screen and (max-width: 920px) {
-  .columns {
-    flex-wrap: wrap;
-  }
+.card {
+  position: relative;
+}
+
+.h2 {
+  align-items: center;
+  margin-bottom: 63px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+}
+
+.h3 {
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  align-items: center;
+  margin: 0;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+}
+
+.background {
+  position: absolute;
+  top: 72%;
+  width: 210px;
+  height: 76px;
+  background: rgba(53, 52, 50, .6);
+  border-radius: 0 0 15px 15px;
 }
