@@ -6,18 +6,28 @@ import Image from 'next/image';
 import { A11y, EffectCube } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import { IMenu, Menu } from '@/components/Menu/Menu';
+import { client } from '@/lib/client';
+
 const images = [
   { src: '/menu-1.jpg', w: 720, h: 1280 },
   { src: '/menu-2.jpg', w: 720, h: 1280 },
   { src: '/menu-3.jpg', w: 1280, h: 910 },
 ];
 
-export default function Menu() {
+interface IProps {
+  menu: IMenu[];
+}
+
+export default function MenuPage({ menu }: IProps) {
   return (
     <>
       <Head>
         <title>Unie - Menu</title>
       </Head>
+      <h1 className="visually-hidden">Unie espresso bar</h1>
+      <h2 className="visually-hidden">Первый эспрессо бар в Самаре</h2>
+
       <section className="menu container">
         <Swiper modules={[A11y, EffectCube]} pagination={{ clickable: true }} scrollbar={{ draggable: true }}>
           {images.map(({ src, w, h }, index) => (
@@ -27,6 +37,18 @@ export default function Menu() {
           ))}
         </Swiper>
       </section>
+
+      <Menu menu={menu} />
     </>
   );
 }
+
+export const getStaticProps = async () => {
+  const query = `{
+    "menu": *[_type == "menu"]
+  }`;
+
+  const { menu } = await client.fetch(query);
+
+  return { props: { menu } };
+};
