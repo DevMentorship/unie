@@ -34,7 +34,9 @@ export const Advantages = () => {
         {blocks.map(({ title, icon, text }, index) => (
           <div key={index} className={styles.block}>
             <Image src={`/${icon}.svg`} alt={icon} width={55} height={55} />
+
             <h3 className="bold">{title}</h3>
+
             <p>{text}</p>
           </div>
         ))}

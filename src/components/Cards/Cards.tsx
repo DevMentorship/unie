@@ -1,18 +1,56 @@
-import cn from 'classnames';
 import Image from 'next/image';
 
 import styles from '@/components/Cards/Cards.module.css';
 
-export const Cards = () => (
-  <section className="container">
-    <h2 className={styles.h2}>Другие новости</h2>
+export const Cards = () => {
+  const cards = [
+    {
+      image: 'matcha',
+      title: 'Матча или маття',
+    },
+    {
+      image: 'cans',
+      title: 'Потенциально опасный контент 18+',
+    },
+    {
+      image: 'vacancy',
+      title: 'Открытые вакансии',
+    },
+    {
+      image: 'coffee',
+      title: 'Дрип-кофе',
+    },
+    {
+      image: 'english',
+      title: 'English clubs',
+    },
+    {
+      image: 'soup',
+      title: 'Суп дня',
+    },
+    {
+      image: 'drinks',
+      title: 'Холодные напитки',
+    },
+    {
+      image: 'breakfast',
+      title: 'Завтраки',
+    },
+  ];
 
-    <div className={styles.cards}>
-      <div className={styles.card}>
-        <Image className={styles.image} src={'/matcha.jpg'} alt={''} width={210} height={280} />
-        <div className={styles.background}></div>
-        <h3 className={styles.h3}>Матча или маття </h3>
+  return (
+    <section className="container">
+      <h2 className={styles.h2}>Другие новости</h2>
+
+      <div className={styles.cards}>
+        {cards.map(({ image, title }, index) => (
+          <div key={index} className={styles.card}>
+            <Image className={styles.image} src={`/${image}.jpg`} alt={image} width={210} height={280} />
+            <div className={styles.background}></div>
+            <h3 className={styles.h3}>{title}</h3>
+          </div>
+        ))}
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
