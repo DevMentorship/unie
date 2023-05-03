@@ -3,6 +3,7 @@ import Image from 'next/image';
 
 import { Advantages } from '@/components/Advantages/Advantages';
 import { Reviews } from '@/components/Reviews/Reviews';
+import { Team } from '@/components/Team/Team';
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
 
       <Advantages />
 
+      <Team />
       <Reviews />
     </>
   );
