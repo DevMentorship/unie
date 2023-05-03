@@ -3,6 +3,7 @@ import 'swiper/css/bundle';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
+import cn from 'classnames';
 import Image from 'next/image';
 import { A11y, Navigation, Pagination, Scrollbar } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -37,21 +38,34 @@ export const Reviews = () => {
     <section className="container">
       <h2 className={styles.h2}>Отзывы</h2>
       <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        modules={[Navigation, Scrollbar]}
         spaceBetween={30}
         slidesPerView={3}
-        navigation
-        pagination={{ clickable: true }}
+        navigation={{
+          nextEl: '.next',
+          prevEl: '.prev',
+        }}
         className={styles.slider}
         loop={true}
       >
         {reviews.map((review, index) => (
           <SwiperSlide className={styles.slider} key={index}>
             <div className={styles.review}>
-              <Image src={review.image} alt={review.image} width={review.width} height={review.height} />
+              <Image className={styles.image} src={review.image} alt={review.image} width={407} height={240} />
             </div>
           </SwiperSlide>
         ))}
+        <div className={styles.buttons}>
+          <button className={cn(styles.prev, 'prev')}>
+            <span className="visually-hidden">Prev Slide</span>
+            <Image src="/arrow.svg" alt="prev arrow" width={30} height={30} />
+          </button>
+
+          <button className={cn(styles.next, 'next')}>
+            <span className="visually-hidden">Next Slide</span>
+            <Image src="/arrow.svg" alt="next arrow" width={30} height={30} />
+          </button>
+        </div>
       </Swiper>
     </section>
   );
