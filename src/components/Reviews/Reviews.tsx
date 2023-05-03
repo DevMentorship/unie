@@ -5,53 +5,65 @@ import 'swiper/css/navigation';
 
 import cn from 'classnames';
 import Image from 'next/image';
-import { A11y, Navigation, Pagination, Scrollbar } from 'swiper';
+import { Navigation, Scrollbar } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import styles from '@/components/Reviews/Reviews.module.css';
 
 export const Reviews = () => {
   const reviews = [
-    {
-      image: '/review1.jpg',
-      width: 507,
-      height: 203,
-    },
-    {
-      image: '/review2.jpg',
-      width: 407,
-      height: 240,
-    },
-    {
-      image: '/review3.jpg',
-      width: 465,
-      height: 203,
-    },
-    {
-      image: '/review4.jpg',
-      width: 456,
-      height: 177,
-    },
+    { image: '/review4.jpg' },
+    { image: '/review5.jpg' },
+    { image: '/review2.jpg' },
+    { image: '/review5.jpg' },
+    { image: '/review4.jpg' },
+    { image: '/review5.jpg' },
+    { image: '/review2.jpg' },
   ];
 
   return (
     <section className="container">
       <h2 className={styles.h2}>Отзывы</h2>
       <Swiper
+        centeredSlides={true}
         modules={[Navigation, Scrollbar]}
-        spaceBetween={30}
-        slidesPerView={3}
+        spaceBetween={100}
+        slidesPerView={1}
         navigation={{
           nextEl: '.next',
           prevEl: '.prev',
         }}
         className={styles.slider}
         loop={true}
+        breakpoints={{
+          768: {
+            slidesPerView: 3,
+          },
+        }}
+        // TODO: fix coverflow effect
+        effect="coverflow"
+        coverflowEffect={{
+          rotate: 30,
+          slideShadows: false,
+        }}
+        // TODO: fix autoplay
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: true,
+        }}
       >
         {reviews.map((review, index) => (
           <SwiperSlide className={styles.slider} key={index}>
             <div className={styles.review}>
-              <Image className={styles.image} src={review.image} alt={review.image} width={407} height={240} />
+              <Image
+                className={styles.image}
+                src={review.image}
+                alt={review.image}
+                width={0}
+                height={0}
+                sizes="100vw"
+                unoptimized
+              />
             </div>
           </SwiperSlide>
         ))}
