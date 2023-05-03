@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import Image from 'next/image';
-import { Autoplay, Navigation } from 'swiper';
+import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import styles from '@/components/Team/Team.module.css';
@@ -65,7 +65,7 @@ export const Team = () => {
       </p>
 
       <Swiper
-        modules={[Autoplay, Navigation]}
+        modules={[Navigation]}
         spaceBetween={30}
         slidesPerView={1}
         breakpoints={{
