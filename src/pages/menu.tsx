@@ -1,6 +1,3 @@
-import 'swiper/css';
-import 'swiper/css/pagination';
-
 import Head from 'next/head';
 import Image from 'next/image';
 import { A11y, EffectCube } from 'swiper';

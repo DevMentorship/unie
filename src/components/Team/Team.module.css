@@ -58,6 +58,12 @@
   text-align: left;
 }
 
+@media (max-width: 1024px) {
+  .description {
+    position: static;
+  }
+}
+
 :global(.swiper-slide-active) .description {
   display: block;
 }
@@ -72,6 +78,12 @@
   top: 16%;
   right: -69%;
   display: none;
+}
+
+@media (max-width: 1024px) {
+  .info {
+    position: static;
+  }
 }
 
 .name {
