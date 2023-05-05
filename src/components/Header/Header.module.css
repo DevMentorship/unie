@@ -1,4 +1,4 @@
-.header {
+/* .header {
   display: flex;
   gap: 40px;
   align-items: baseline;
@@ -34,4 +34,28 @@
 .link:hover::before {
   transform: scaleX(1);
   transform-origin: left;
+} */
+
+/* .header {
 }
+
+.blocks {
+}
+.logo {
+}
+
+.contacts {
+}
+.address {
+}
+.phone {
+}
+
+.menu {
+}
+
+.buttons {
+}
+
+.button {
+} */
