@@ -21,6 +21,10 @@ li {
   list-style-type: none;
 }
 
+ul {
+  margin: 0;
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;

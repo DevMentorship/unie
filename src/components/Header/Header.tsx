@@ -1,6 +1,7 @@
+import cn from 'classnames';
 import Image from 'next/image';
-import Link from 'next/link';
 
+// import Link from 'next/link';
 import styles from '@/components/Header/Header.module.css';
 
 const pages = [
@@ -16,11 +17,13 @@ export const Header = () => (
         <div className={styles.logo}>
           <Image className={styles.image} src={'/logo.svg'} alt={'logo'} width={80} height={80} />
         </div>
+
         <div className={styles.contacts}>
           <div className={styles.address}>
             <Image className={styles.image} src={'/position.svg'} alt={'position'} width={25} height={25} />
-            <p>Самара</p>
-            <p>Стара Загора 27</p>
+            <p>
+              Самара<span className={styles.text}>Стара Загора 27</span>
+            </p>
           </div>
           <div className={styles.phone}>
             <Image className={styles.image} src={'/phone.svg'} alt={'phone'} width={25} height={25} />
@@ -28,13 +31,16 @@ export const Header = () => (
           </div>
         </div>
       </div>
-      <div className={styles.menu}>
-        <div className={styles.buttons}>
-          <button className={styles.button}>Главная</button>
-          <button className={styles.button}>Новости</button>
-          <button className={styles.button}>Меню</button>
-        </div>
+      <div className={styles.burger}>
+        <span></span>
       </div>
+      <nav className={styles.menu}>
+        <ul className={styles.list}>
+          <li className={styles.link}>Главная</li>
+          <li className={styles.link}>Новости</li>
+          <li className={styles.link}>Меню</li>
+        </ul>
+      </nav>
     </div>
   </section>
 
