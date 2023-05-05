@@ -10,13 +10,6 @@
   text-transform: uppercase;
 }
 
-.block1 {
-  display: block;
-  align-items: center;
-  justify-content: center;
-  text-align: left;
-}
-
 .address {
   margin-bottom: 50px;
 }
