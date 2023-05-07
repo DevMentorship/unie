@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta content="/unie-photo.jpg" property="og:image" />
         <meta content="Unie Espresso Bar - logo" property="og:image:alt" />
-        <meta property="og:title" content="Unie Espresso Bat - первый эспрессо бар в Самаре" />
+        <meta property="og:title" content="Unie Espresso Bar - первый эспрессо бар в Самаре" />
         <meta property="og:description" content="Unie Espresso Bar - первый эспрессо бар в Самаре" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="627" />

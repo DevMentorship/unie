@@ -28,7 +28,7 @@ export const Advantages = () => {
 
   return (
     <section className="container">
-      <h2 className="heading2 bold">Почему именно мы?</h2>
+      <h2 className="h2 bold">Почему именно мы?</h2>
 
       <div className={styles.blocks}>
         {blocks.map(({ title, icon, text }, index) => (

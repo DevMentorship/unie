@@ -27,18 +27,22 @@ main {
 }
 
 .h1 {
-  font-size: 2rem;
+  font-size: 3.2rem;
 }
 
 .h2 {
-  font-size: 1.5rem;
+  font-size: 2.4rem;
 }
 
 .h3 {
   font-size: 1rem;
 }
 
-.paragraph2 {
+.h4 {
+  font-size: .8rem;
+}
+
+.p {
   font-size: 1.4rem;
 }
 
