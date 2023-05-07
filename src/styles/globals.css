@@ -17,6 +17,10 @@ a {
   line-height: 1.2;
 }
 
+li {
+  list-style-type: none;
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
