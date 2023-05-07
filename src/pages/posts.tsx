@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
+import { Cards } from '@/components/Cards/Cards';
 import { client } from '@/lib/client';
 
 import type { IPost } from './post/[slug]';
@@ -22,6 +23,8 @@ const Posts = ({ posts }: { posts: IPost[] }) => (
         </div>
       ))}
     </section>
+
+    <Cards />
   </>
 );
 
