@@ -1,31 +1,74 @@
 .header {
+  width: 100%;
+}
+
+.blocks {
+  position: relative;
   display: flex;
-  gap: 40px;
-  align-items: baseline;
-  justify-content: center;
-  margin: 50px 0;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contacts {
+  display: flex;
+}
+
+.address,
+.phone {
+  display: flex;
+  align-items: center;
+  margin: 0 45px 0 0;
+  text-align: left;
+}
+
+.phone {
+  margin: 0;
+}
+
+.address p,
+.phone p {
+  padding: 0 0 0 10px;
+}
+
+.text {
+  display: block;
+}
+
+.menu {
+  display: flex;
+  text-align: left;
+}
+
+.list {
+  display: flex;
+  padding-left: 0;
+}
+
+.list li {
+  margin: 0 20px 0 0;
 }
 
 .link {
   position: relative;
-  font-size: 4rem;
+  padding: 1rem 2rem;
+  overflow: hidden;
+  font-size: 2.4rem;
+  line-height: 1.2;
   color: #18272f;
   text-decoration: none;
-}
-
-.link:nth-child(2) {
-  font-size: 6rem;
+  border: 1px solid #353432;
+  border-radius: 25px;
 }
 
 .link::before {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
+  bottom: 4px;
+  left: 15%;
+  width: 70%;
+  height: 2px;
   content: '';
-  background-color: #18272f;
-  border-radius: 4px;
+  background: #18272f;
+  border-radius: 25px;
   transition: transform .3s ease-in-out;
   transform: scaleX(0);
   transform-origin: right;
@@ -34,4 +77,15 @@
 .link:hover::before {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+@media screen and (max-width: 530px) {
+  .contacts {
+    display: block;
+  }
+
+  .menu {
+    justify-content: center;
+    margin-top: 15px;
+  }
 }
