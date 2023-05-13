@@ -18,7 +18,7 @@ export const Menu = ({ menu }: IProps) => (
     <ul>
       {menu?.map(({ _id, mainImage, description }: IMenu) => (
         <li key={_id}>
-          <Image src={urlFor(mainImage).url()} width="210" height="280" alt="" />
+          {mainImage && <Image src={urlFor(mainImage).url()} width="210" height="280" alt="" />}
           <h2>{description}</h2>
         </li>
       ))}
