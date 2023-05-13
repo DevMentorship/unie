@@ -1,26 +1,33 @@
-// import cn from 'classnames';
+import cn from 'classnames';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import styles from '@/components/Footer/Footer.module.css';
 
-// const pages = [
-//   { label: 'Новости', href: '/posts' },
-//   { label: 'UNIE', href: '/' },
-//   { label: 'Меню', href: '/menu' },
-// ];
+const pages = [
+  { label: 'UNIE', href: '/' },
+  { label: 'Новости', href: '/posts' },
+  { label: 'Меню', href: '/menu' },
+];
 
 export const Footer = () => (
-  <section className="container">
+  <footer className={cn('container', styles.wrapper)}>
     <div className={styles.footer}>
       <div className={styles.blocks}>
         <div className={styles.logo}>
-          <Image className={styles.image} src={'/logo.svg'} alt={'logo'} width={114} height={114} />
+          <Link href="/">
+            <Image className={styles.image} src={'/logo.svg'} alt={'logo'} width={114} height={114} />
+          </Link>
         </div>
         <nav className={styles.menu}>
           <ul className={styles.list}>
-            <li className={styles.link}>Главная</li>
-            <li className={styles.link}>Меню</li>
-            <li className={styles.link}>Новости</li>
+            {pages.map(({ label, href }, index) => (
+              <li key={index}>
+                <Link href={href} className={styles.link}>
+                  {label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
         <div className={styles.socials}>
@@ -34,11 +41,5 @@ export const Footer = () => (
         </div>
       </div>
     </div>
-  </section>
+  </footer>
 );
-
-/* {pages.map(({ label, href }, index) => (
-        <Link href={href} key={index} className={styles.link}>
-          {label}
-        </Link>
-      ))} */
