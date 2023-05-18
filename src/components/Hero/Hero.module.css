@@ -1,0 +1,28 @@
+.heroContainer {
+  position: relative;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  padding: 12px 29px;
+  text-align: center;
+  background: rgba(53, 52, 50, .6);
+  border-radius: 15px;
+  transform: translate(-50%, -50%);
+}
+
+.image {
+  position: relative;
+}
+
+.title {
+  color: #ffffff;
+}
+
+.description {
+  font-weight: 400;
+  color: #ffffff;
+}
