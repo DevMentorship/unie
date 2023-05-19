@@ -1,13 +1,10 @@
 import Image from 'next/image';
-import { useInView } from 'react-intersection-observer';
 
 import styles from '@/components/Advantages/Advantages.module.css';
+import useElementOnScreen from '@/hooks/useElementOnScreen';
 
 export const Advantages = () => {
-  const { ref, inView } = useInView({
-    threshold: 0.2,
-    triggerOnce: true,
-  });
+  const { ref } = useElementOnScreen();
 
   const blocks = [
     {
@@ -36,9 +33,9 @@ export const Advantages = () => {
     <section className="container">
       <h2 className="h2 bold">Почему именно мы?</h2>
 
-      <div ref={ref} className={`${styles.blocks} ${inView ? styles.active : ''}`}>
+      <div className={styles.blocks} ref={ref}>
         {blocks.map(({ title, icon, text }, index) => (
-          <div key={index} className={styles.block}>
+          <div key={index} className={styles.block} data-block>
             <Image src={`/${icon}.svg`} alt={icon} width={55} height={55} />
 
             <h3 className="bold">{title}</h3>

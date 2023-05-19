@@ -17,7 +17,7 @@ const Posts = ({ posts }: { posts: IPost[] }) => (
           <h2>{post.title}</h2>
           <p>{post.publishedAt}</p>
           <p>{post.description}</p>
-          <Link href={`/post/${post.slug.current}`}>
+          <Link href={`/post/${post.slug?.current}`}>
             <span>Подробнее</span>
           </Link>
         </div>
