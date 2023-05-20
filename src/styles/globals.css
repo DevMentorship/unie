@@ -95,6 +95,17 @@ main {
   transform-style: preserve-3d;
 }
 
+.invisibleChild {
+  opacity: 0;
+  transition: all ease-in .5s;
+  transform: translateX(-20%);
+}
+
+.slideIn {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 @keyframes flip-animation {
   0% {
     transform: rotateY(0deg);

@@ -6,17 +6,6 @@
   text-align: center;
 }
 
-.block {
-  opacity: 0;
-  transition: all ease-in .5s;
-  transform: translateX(-15%);
-}
-
-.slideIn {
-  opacity: 1;
-  transform: translateX(0);
-}
-
 @media (max-width: 1024px) {
   .blocks {
     flex-wrap: wrap;

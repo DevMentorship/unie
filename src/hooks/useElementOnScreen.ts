@@ -1,7 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 
-import styles from '@/components/Advantages/Advantages.module.css';
-
 const useElementOnScreen = () => {
   const [isIntersecting, setIsIntersecting] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
@@ -14,7 +12,7 @@ const useElementOnScreen = () => {
         ([entry]) => {
           setIsIntersecting(entry.isIntersecting);
         },
-        { rootMargin: '-30px' },
+        { rootMargin: '-60px' },
       );
 
       observer.observe(currentRef);
@@ -27,8 +25,8 @@ const useElementOnScreen = () => {
 
   useEffect(() => {
     if (isIntersecting && ref.current) {
-      ref.current.querySelectorAll<Element>('[data-block]').forEach((block) => {
-        block.classList.add(styles.slideIn);
+      ref.current.querySelectorAll<Element>('[data-child]').forEach((block) => {
+        block.classList.add('slideIn');
       });
     }
   }, [isIntersecting]);

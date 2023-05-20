@@ -4,8 +4,11 @@ import { Navigation, Scrollbar } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import styles from '@/components/Reviews/Reviews.module.css';
+import useElementOnScreen from '@/hooks/useElementOnScreen';
 
 export const Reviews = () => {
+  const { ref } = useElementOnScreen();
+
   const reviews = [
     { image: '/review4.jpg' },
     { image: '/review5.jpg' },
@@ -17,9 +20,12 @@ export const Reviews = () => {
   ];
 
   return (
-    <section className="container">
-      <h2 className={styles.h2}>Отзывы</h2>
+    <section className="container" ref={ref}>
+      <h2 className={cn(styles.h2, 'invisibleChild')} data-child>
+        Отзывы
+      </h2>
       <Swiper
+        data-child
         centeredSlides={true}
         modules={[Navigation, Scrollbar]}
         spaceBetween={100}
@@ -28,7 +34,7 @@ export const Reviews = () => {
           nextEl: '.next',
           prevEl: '.prev',
         }}
-        className={styles.slider}
+        className={cn(styles.slider, 'invisibleChild')}
         loop={true}
         breakpoints={{
           768: {

@@ -1,3 +1,4 @@
+import cn from 'classnames';
 import Image from 'next/image';
 
 import styles from '@/components/Advantages/Advantages.module.css';
@@ -35,7 +36,7 @@ export const Advantages = () => {
 
       <div className={styles.blocks} ref={ref}>
         {blocks.map(({ title, icon, text }, index) => (
-          <div key={index} className={styles.block} data-block>
+          <div key={index} className={cn(styles.block, 'invisibleChild')} data-child>
             <Image src={`/${icon}.svg`} alt={icon} width={55} height={55} />
 
             <h3 className="bold">{title}</h3>
