@@ -43,8 +43,8 @@ export const PostsCarousel = ({ posts }: { posts: IPost[] }) => (
             </button>
           </div>
           <p className={cn(styles.title, 'h1', 'bold')}>{post.title}</p>
-          <p className={cn(styles.description, 'h2')}>{post.description}</p>
-          <p className={cn(styles.body, '.h3')}>{post.body}</p>
+          <p className={cn(styles.description, 'h3')}>{post.description}</p>
+          <p className={cn(styles.body, 'h3')}>{post.body}</p>
           <p className={styles.publishedAt}>{post.publishedAt}</p>
         </SwiperSlide>
       ))}
