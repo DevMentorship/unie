@@ -4,8 +4,11 @@ import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import styles from '@/components/Team/Team.module.css';
+import useElementOnScreen from '@/hooks/useElementOnScreen';
 
 export const Team = () => {
+  const { ref } = useElementOnScreen();
+
   const slides = [
     {
       name: 'Никита',
@@ -57,7 +60,7 @@ export const Team = () => {
     },
   ];
   return (
-    <section className="container">
+    <section className="container" ref={ref}>
       <h2 className="h2">Наша команда</h2>
       <p>
         Мы настоящая кофейная семья профессионалов своего дела, где каждый человек - личность, объединяет которых
@@ -82,7 +85,7 @@ export const Team = () => {
         }}
       >
         {slides.map((slide, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className="invisible-child" data-child>
             <div className={styles.image}>
               <Image src={slide.photo} alt={slide.name} width={270} height={360} />
             </div>
