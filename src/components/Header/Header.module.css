@@ -32,11 +32,18 @@
 .address p,
 .phone p {
   padding: 0 0 0 10px;
+  margin: 0;
 }
 
 .phone a {
   color: #18272f;
   text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .address p {
+    margin-bottom: 10px;
+  }
 }
 
 .text {
