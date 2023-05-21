@@ -48,9 +48,9 @@ export const Cards = () => {
         Другие новости
       </h2>
 
-      <div className={cn(styles.cards, 'invisible-child')} data-child>
+      <div className={styles.cards}>
         {cards.map(({ image, title }, index) => (
-          <div key={index} className={styles.card}>
+          <div key={index} className={cn(styles.card, 'invisible-child')} data-child>
             <Image className={styles.image} src={`/${image}.jpg`} alt={image} width={230} height={350} />
             <div className={styles.inner}>
               <h3 className={styles.h3}>{title}</h3>

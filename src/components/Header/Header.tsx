@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import styles from '@/components/Header/Header.module.css';
-import useElementOnScreen from '@/hooks/useElementOnScreen';
 
 const pages = [
   { label: 'UNIE', href: '/' },
@@ -14,11 +13,10 @@ const pages = [
 
 export const Header = () => {
   const router = useRouter();
-  const { ref } = useElementOnScreen();
 
   return (
-    <header className="container" ref={ref}>
-      <div className={cn(styles.header, 'invisible-child')} data-child>
+    <header className={cn('container', styles['header-wrapper'])}>
+      <div className={styles.header}>
         <div className={styles.blocks}>
           <div className={styles.logo}>
             <Link href="/">

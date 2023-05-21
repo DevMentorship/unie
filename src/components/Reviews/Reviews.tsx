@@ -25,7 +25,6 @@ export const Reviews = () => {
         Отзывы
       </h2>
       <Swiper
-        data-child
         centeredSlides={true}
         modules={[Navigation, Scrollbar]}
         spaceBetween={100}
@@ -34,7 +33,7 @@ export const Reviews = () => {
           nextEl: '.next',
           prevEl: '.prev',
         }}
-        className={cn(styles.slider, 'invisible-child')}
+        className={styles.slider}
         loop={true}
         breakpoints={{
           768: {
@@ -54,7 +53,7 @@ export const Reviews = () => {
         }}
       >
         {reviews.map((review, index) => (
-          <SwiperSlide className={styles.slider} key={index}>
+          <SwiperSlide className={cn(styles.slider, 'invisible-child')} key={index} data-child>
             <div className={styles.review}>
               <Image
                 className={styles.image}

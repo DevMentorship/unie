@@ -61,66 +61,64 @@ export const Team = () => {
   ];
   return (
     <section className="container" ref={ref}>
-      <div className="invisible-child" data-child>
-        <h2 className="h2">Наша команда</h2>
-        <p>
-          Мы настоящая кофейная семья профессионалов своего дела, где каждый человек - личность, объединяет которых
-          исключительный кофе и стремление развивать культуру спешиалити кофе.
-        </p>
+      <h2 className="h2">Наша команда</h2>
+      <p>
+        Мы настоящая кофейная семья профессионалов своего дела, где каждый человек - личность, объединяет которых
+        исключительный кофе и стремление развивать культуру спешиалити кофе.
+      </p>
 
-        <Swiper
-          modules={[Navigation]}
-          spaceBetween={30}
-          slidesPerView={1}
-          breakpoints={{
-            1200: {
-              slidesPerView: 3,
-            },
-          }}
-          centeredSlides={true}
-          className={styles.slider}
-          loop={true}
-          navigation={{
-            nextEl: '.next',
-            prevEl: '.prev',
-          }}
-        >
-          {slides.map((slide, index) => (
-            <SwiperSlide key={index}>
-              <div className={styles.image}>
-                <Image src={slide.photo} alt={slide.name} width={270} height={360} />
+      <Swiper
+        modules={[Navigation]}
+        spaceBetween={30}
+        slidesPerView={1}
+        breakpoints={{
+          1200: {
+            slidesPerView: 3,
+          },
+        }}
+        centeredSlides={true}
+        className={styles.slider}
+        loop={true}
+        navigation={{
+          nextEl: '.next',
+          prevEl: '.prev',
+        }}
+      >
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index} className="invisible-child" data-child>
+            <div className={styles.image}>
+              <Image src={slide.photo} alt={slide.name} width={270} height={360} />
+            </div>
+
+            <div className={styles.info}>
+              <h4 className={styles.name}>{slide.name}</h4>
+
+              <div className={styles.socials}>
+                <button className={styles.icons}>
+                  <Image src="/vk.svg" className={styles.button} alt={''} width={40} height={40} />
+                </button>
+
+                <button className={styles.icons}>
+                  <Image src="/instagram.svg" className={styles.button} alt={''} width={40} height={40} />
+                </button>
               </div>
+            </div>
 
-              <div className={styles.info}>
-                <h4 className={styles.name}>{slide.name}</h4>
+            <p className={styles.description}>{slide.description}</p>
+          </SwiperSlide>
+        ))}
+        <div className={styles.buttons}>
+          <button className={cn(styles.prev, 'prev')}>
+            <span className="visually-hidden">Prev Slide</span>
+            <Image src="/arrow.svg" alt="prev arrow" width={30} height={30} />
+          </button>
 
-                <div className={styles.socials}>
-                  <button className={styles.icons}>
-                    <Image src="/vk.svg" className={styles.button} alt={''} width={40} height={40} />
-                  </button>
-
-                  <button className={styles.icons}>
-                    <Image src="/instagram.svg" className={styles.button} alt={''} width={40} height={40} />
-                  </button>
-                </div>
-              </div>
-
-              <p className={styles.description}>{slide.description}</p>
-            </SwiperSlide>
-          ))}
-          <div className={styles.buttons}>
-            <button className={cn(styles.prev, 'prev')}>
-              <span className="visually-hidden">Prev Slide</span>
-              <Image src="/arrow.svg" alt="prev arrow" width={30} height={30} />
-            </button>
-
-            <button className={cn(styles.next, 'next')}>
-              <span className="visually-hidden">Next Slide</span>
-              <Image src="/arrow.svg" alt="next arrow" width={30} height={30} />
-            </button>
-          </div>
-        </Swiper>
-      </div>
+          <button className={cn(styles.next, 'next')}>
+            <span className="visually-hidden">Next Slide</span>
+            <Image src="/arrow.svg" alt="next arrow" width={30} height={30} />
+          </button>
+        </div>
+      </Swiper>
     </section>
   );
 };
