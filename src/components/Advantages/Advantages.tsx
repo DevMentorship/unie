@@ -36,7 +36,7 @@ export const Advantages = () => {
 
       <div className={styles.blocks} ref={ref}>
         {blocks.map(({ title, icon, text }, index) => (
-          <div key={index} className={cn(styles.block, 'invisibleChild')} data-child>
+          <div key={index} className={cn(styles.block, 'invisible-child')} data-child>
             <Image src={`/${icon}.svg`} alt={icon} width={55} height={55} />
 
             <h3 className="bold">{title}</h3>

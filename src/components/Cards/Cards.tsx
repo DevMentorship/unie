@@ -44,11 +44,11 @@ export const Cards = () => {
 
   return (
     <section className="container" ref={ref}>
-      <h2 className={cn(styles.h2, 'invisibleChild')} data-child>
+      <h2 className={cn(styles.h2, 'invisible-child')} data-child>
         Другие новости
       </h2>
 
-      <div className={cn(styles.cards, 'invisibleChild')} data-child>
+      <div className={cn(styles.cards, 'invisible-child')} data-child>
         {cards.map(({ image, title }, index) => (
           <div key={index} className={styles.card}>
             <Image className={styles.image} src={`/${image}.jpg`} alt={image} width={230} height={350} />

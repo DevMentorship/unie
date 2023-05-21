@@ -21,7 +21,7 @@ export const Reviews = () => {
 
   return (
     <section className="container" ref={ref}>
-      <h2 className={cn(styles.h2, 'invisibleChild')} data-child>
+      <h2 className={cn(styles.h2, 'invisible-child')} data-child>
         Отзывы
       </h2>
       <Swiper
@@ -34,7 +34,7 @@ export const Reviews = () => {
           nextEl: '.next',
           prevEl: '.prev',
         }}
-        className={cn(styles.slider, 'invisibleChild')}
+        className={cn(styles.slider, 'invisible-child')}
         loop={true}
         breakpoints={{
           768: {

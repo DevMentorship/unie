@@ -9,7 +9,7 @@ export const Contacts = () => {
 
   return (
     <section className={cn('container', styles.blocks)} ref={ref}>
-      <div className={cn(styles.contacts, 'invisibleChild')} data-child>
+      <div className={cn(styles.contacts, 'invisible-child')} data-child>
         <div>
           <h3 className={styles.h1}>Mы ждём вас!</h3>
           <div className={styles.address}>
@@ -27,7 +27,7 @@ export const Contacts = () => {
           </div>
         </div>
       </div>
-      <div className={cn(styles.image, 'invisibleChild')} data-child>
+      <div className={cn(styles.image, 'invisible-child')} data-child>
         <Image src="/people.jpg" alt={''} width={467} height={467} />
       </div>
     </section>

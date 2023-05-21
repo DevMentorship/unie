@@ -18,7 +18,7 @@ export const Header = () => {
 
   return (
     <header className="container" ref={ref}>
-      <div className={cn(styles.header, 'invisibleChild')} data-child>
+      <div className={cn(styles.header, 'invisible-child')} data-child>
         <div className={styles.blocks}>
           <div className={styles.logo}>
             <Link href="/">

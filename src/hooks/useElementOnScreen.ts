@@ -12,7 +12,10 @@ const useElementOnScreen = () => {
         ([entry]) => {
           setIsIntersecting(entry.isIntersecting);
         },
-        { rootMargin: '-60px' },
+        {
+          rootMargin: '-100px',
+          threshold: 0.1,
+        },
       );
 
       observer.observe(currentRef);
@@ -25,8 +28,8 @@ const useElementOnScreen = () => {
 
   useEffect(() => {
     if (isIntersecting && ref.current) {
-      ref.current.querySelectorAll<Element>('[data-child]').forEach((block) => {
-        block.classList.add('slideIn');
+      ref.current.querySelectorAll<HTMLElement>('[data-child]').forEach((block) => {
+        block.classList.add('slide-in', 'fade-in');
       });
     }
   }, [isIntersecting]);

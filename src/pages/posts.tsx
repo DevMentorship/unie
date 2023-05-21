@@ -16,7 +16,7 @@ const Posts = ({ posts }: { posts: IPost[] }) => {
         <title>Unie - Новости</title>
       </Head>
       <section className="container" ref={ref}>
-        <div className="invisibleChild" data-child>
+        <div className="invisible-child" data-child>
           {posts.map((post) => (
             <div key={post._id}>
               <h2>{post.title}</h2>

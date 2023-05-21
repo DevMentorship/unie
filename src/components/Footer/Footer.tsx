@@ -16,7 +16,7 @@ export const Footer = () => {
 
   return (
     <footer className={cn('container', styles.wrapper)} ref={ref}>
-      <div className={cn(styles.footer, 'invisibleChild')} data-child>
+      <div className={cn(styles.footer, 'invisible-child')} data-child>
         <div className={styles.blocks}>
           <div className={styles.logo}>
             <Link href="/">

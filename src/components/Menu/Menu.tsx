@@ -18,10 +18,10 @@ export const Menu = ({ menu }: IProps) => {
 
   return (
     <section ref={ref}>
-      <h2 className="invisibleChild" data-child>
+      <h2 className="invisible-child" data-child>
         Menu
       </h2>
-      <ul className="invisibleChild" data-child>
+      <ul className="invisible-child" data-child>
         {menu?.map(({ _id, mainImage, description }: IMenu) => (
           <li key={_id}>
             {mainImage && <Image src={urlFor(mainImage).url()} width="210" height="280" alt="" />}

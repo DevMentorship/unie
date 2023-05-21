@@ -61,7 +61,7 @@ export const Team = () => {
   ];
   return (
     <section className="container" ref={ref}>
-      <div className="invisibleChild" data-child>
+      <div className="invisible-child" data-child>
         <h2 className="h2">Наша команда</h2>
         <p>
           Мы настоящая кофейная семья профессионалов своего дела, где каждый человек - личность, объединяет которых

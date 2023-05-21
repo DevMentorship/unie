@@ -30,7 +30,7 @@ export default function MenuPage({ menu }: IProps) {
 
       <section className="menu container" ref={ref}>
         <Swiper
-          className="invisibleChild"
+          className="invisible-child"
           modules={[A11y, EffectCube]}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
