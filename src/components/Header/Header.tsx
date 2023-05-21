@@ -15,7 +15,7 @@ export const Header = () => {
   const router = useRouter();
 
   return (
-    <header className="container">
+    <header className={cn('container', styles['header-wrapper'])}>
       <div className={styles.header}>
         <div className={styles.blocks}>
           <div className={styles.logo}>
