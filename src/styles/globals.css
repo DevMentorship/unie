@@ -15,6 +15,11 @@ a {
     sans-serif;
   font-size: 1.6rem;
   line-height: 1.2;
+  color: #353432;
+}
+
+body {
+  margin: 0;
 }
 
 li {
@@ -35,23 +40,41 @@ main {
 }
 
 .h1 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .h2 {
-  font-size: 1.5rem;
+  font-size: 2.4rem;
 }
 
 .h3 {
-  font-size: 1rem;
+  font-size: 2rem;
 }
 
 .h4 {
-  font-size: .8rem;
+  font-size: 1.8rem;
+}
+
+@media screen and (max-width: 768px) {
+  .h1 {
+    font-size: 2.4rem;
+  }
+
+  .h2 {
+    font-size: 2rem;
+  }
+
+  .h3 {
+    font-size: 1.8rem;
+  }
+
+  .h4 {
+    font-size: 1.6rem;
+  }
 }
 
 .p {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .bold {
@@ -73,6 +96,12 @@ main {
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin-bottom: 50px;
+  }
 }
 
 .hero {
