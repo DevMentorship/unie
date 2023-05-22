@@ -41,13 +41,19 @@
 }
 
 @media screen and (max-width: 768px) {
+  .phone,
+  .address {
+    margin: 0;
+  }
+
+  .phone a,
   .address p {
+    font-size: 1.4rem;
+  }
+
+  .address {
     margin-bottom: 10px;
   }
-}
-
-.text {
-  display: block;
 }
 
 .menu {
@@ -75,6 +81,12 @@
   text-decoration: none;
   border: 1px solid #353432;
   border-radius: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  .link {
+    font-size: 1.8rem;
+  }
 }
 
 .link::before {

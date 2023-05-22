@@ -21,7 +21,7 @@ export const Reviews = () => {
 
   return (
     <section className="container" ref={ref}>
-      <h2 className={cn(styles.h2, 'invisible-child')} data-child>
+      <h2 className={cn('h1', styles.h2, 'invisible-child')} data-child>
         Отзывы
       </h2>
       <Swiper
@@ -33,7 +33,7 @@ export const Reviews = () => {
           nextEl: '.next',
           prevEl: '.prev',
         }}
-        className={styles.slider}
+        className="invisible-child"
         loop={true}
         breakpoints={{
           768: {
@@ -51,9 +51,10 @@ export const Reviews = () => {
           delay: 2000,
           disableOnInteraction: true,
         }}
+        data-child
       >
         {reviews.map((review, index) => (
-          <SwiperSlide className={cn(styles.slider, 'invisible-child')} key={index} data-child>
+          <SwiperSlide key={index}>
             <div className={styles.review}>
               <Image
                 className={styles.image}
