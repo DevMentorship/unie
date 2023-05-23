@@ -33,11 +33,11 @@ export const PostsCarousel = ({ posts }: { posts: IPost[] }) => (
             />
           </div>
           <div className={styles.buttons}>
-            <button className={cn(styles.prev, 'prev')}>
+            <button className={cn(styles.prev, 'prev')} aria-label="Кнопка Предыдущая новость">
               <span className="visually-hidden">Prev Slide</span>
               <Image src="/arrow.svg" alt="prev arrow" width={30} height={30} />
             </button>
-            <button className={cn(styles.next, 'next')}>
+            <button className={cn(styles.next, 'next')} aria-label="Кнопка Следующая новость">
               <span className="visually-hidden">Next Slide</span>
               <Image src="/arrow.svg" alt="next arrow" width={30} height={30} />
             </button>
