@@ -1,12 +1,8 @@
-import cn from 'classnames';
 import Image from 'next/image';
 
 import styles from '@/components/Cards/Cards.module.css';
-import useElementOnScreen from '@/hooks/useElementOnScreen';
 
 export const Cards = () => {
-  const { ref } = useElementOnScreen();
-
   const cards = [
     {
       image: 'matcha',
@@ -43,14 +39,12 @@ export const Cards = () => {
   ];
 
   return (
-    <section className="container" ref={ref}>
-      <h2 className={cn(styles.h2, 'invisible-child')} data-child>
-        Другие новости
-      </h2>
+    <section className="container">
+      <h2 className={styles.h2}>Другие новости</h2>
 
       <div className={styles.cards}>
         {cards.map(({ image, title }, index) => (
-          <div key={index} className={cn(styles.card, 'invisible-child')} data-child>
+          <div key={index} className={styles.card}>
             <Image className={styles.image} src={`/${image}.jpg`} alt={image} width={230} height={350} />
             <div className={styles.inner}>
               <h3 className={styles.h3}>{title}</h3>
