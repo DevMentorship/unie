@@ -7,7 +7,8 @@ import { Reviews } from '@/components/Reviews/Reviews';
 import { Team } from '@/components/Team/Team';
 import { client } from '@/lib/client';
 
-export default function Home({ hero }: { hero: IHero[] }) {
+export default function Home({ hero, reviews }: { hero: IHero[]; reviews: string[] }) {
+  console.log(reviews);
   return (
     <>
       <Head>
@@ -21,17 +22,18 @@ export default function Home({ hero }: { hero: IHero[] }) {
 
       <Contacts />
       <Team />
-      <Reviews />
+      <Reviews reviews={reviews} />
     </>
   );
 }
 
 export const getStaticProps = async () => {
   const query = `{
-    "hero": *[_type == "hero"]
+    "hero": *[_type == "hero"],
+    "reviews": *[_type == "reviews"] ,
   }`;
 
-  const { hero }: { hero: IHero[] } = await client.fetch(query);
+  const { hero, reviews }: { hero: IHero[]; reviews: string[] } = await client.fetch(query);
 
-  return { props: { hero } };
+  return { props: { hero, reviews } };
 };

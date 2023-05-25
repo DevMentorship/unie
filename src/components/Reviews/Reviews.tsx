@@ -1,23 +1,17 @@
 import cn from 'classnames';
 import Image from 'next/image';
-import { Navigation, Scrollbar } from 'swiper';
+import { Autoplay, Navigation, Scrollbar } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import styles from '@/components/Reviews/Reviews.module.css';
 import useElementOnScreen from '@/hooks/useElementOnScreen';
+import { urlFor } from '@/lib/client';
 
-export const Reviews = () => {
+export interface IReview {
+  image: string;
+}
+export const Reviews = ({ reviews }: { reviews: IReview[] }) => {
   const { ref } = useElementOnScreen();
-
-  const reviews = [
-    { image: '/review4.jpg' },
-    { image: '/review5.jpg' },
-    { image: '/review2.jpg' },
-    { image: '/review5.jpg' },
-    { image: '/review4.jpg' },
-    { image: '/review5.jpg' },
-    { image: '/review2.jpg' },
-  ];
 
   return (
     <section className="container" ref={ref}>
@@ -26,7 +20,7 @@ export const Reviews = () => {
       </h2>
       <Swiper
         centeredSlides={true}
-        modules={[Navigation, Scrollbar]}
+        modules={[Navigation, Scrollbar, Autoplay]}
         spaceBetween={100}
         slidesPerView={1}
         navigation={{
@@ -53,13 +47,13 @@ export const Reviews = () => {
         }}
         data-child
       >
-        {reviews.map((review, index) => (
+        {reviews.map(({ image }, index) => (
           <SwiperSlide key={index}>
             <div className={styles.review}>
               <Image
                 className={styles.image}
-                src={review.image}
-                alt={review.image}
+                src={urlFor(image).url()}
+                alt="отзыв"
                 width={0}
                 height={0}
                 sizes="100vw"
