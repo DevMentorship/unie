@@ -1,63 +1,22 @@
-import cn from 'classnames';
-import Image from 'next/image';
+import { FC } from 'react';
 
 import styles from '@/components/Cards/Cards.module.css';
-import useElementOnScreen from '@/hooks/useElementOnScreen';
 
-export const Cards = () => {
-  const { ref } = useElementOnScreen();
+import { Card } from '../Card/Card';
 
-  const cards = [
-    {
-      image: 'matcha',
-      title: 'Матча или маття',
-    },
-    {
-      image: 'cans',
-      title: 'Потенциально опасный контент 18+',
-    },
-    {
-      image: 'vacancy',
-      title: 'Открытые вакансии',
-    },
-    {
-      image: 'coffee',
-      title: 'Дрип-кофе',
-    },
-    {
-      image: 'english',
-      title: 'English clubs',
-    },
-    {
-      image: 'soup',
-      title: 'Суп дня',
-    },
-    {
-      image: 'drinks',
-      title: 'Холодные напитки',
-    },
-    {
-      image: 'breakfast',
-      title: 'Завтраки',
-    },
-  ];
+export interface INews {
+  _id: string;
+  title: string;
+  mainImage: string;
+}
 
-  return (
-    <section className="container" ref={ref}>
-      <h2 className={cn(styles.h2, 'invisible-child')} data-child>
-        Другие новости
-      </h2>
-
-      <div className={styles.cards}>
-        {cards.map(({ image, title }, index) => (
-          <div key={index} className={cn(styles.card, 'invisible-child')} data-child>
-            <Image className={styles.image} src={`/${image}.jpg`} alt={image} width={230} height={350} />
-            <div className={styles.inner}>
-              <h3 className={styles.h3}>{title}</h3>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-};
+export const Cards = ({ news }: { news: INews[] }) => (
+  <section className="container">
+    <h2 className={styles.h2}>Другие новости</h2>
+    <div className={styles.cards}>
+      {news.map((item: INews) => (
+        <Card key={item._id} {...item} />
+      ))}
+    </div>
+  </section>
+);

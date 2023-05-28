@@ -52,7 +52,6 @@ const Post = ({ post }: { post: IPost }) => (
 //       post.slug.current;
 //     }
 //   });
-
 //   return { paths, fallback: 'blocking' };
 // };
 
