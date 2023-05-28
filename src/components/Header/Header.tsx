@@ -15,7 +15,7 @@ export const Header = () => {
   const router = useRouter();
 
   return (
-    <header className="container">
+    <header className={cn('container', styles['header-wrapper'])}>
       <div className={styles.header}>
         <div className={styles.blocks}>
           <div className={styles.logo}>
@@ -29,7 +29,7 @@ export const Header = () => {
               <Image className={styles.image} src={'/position.svg'} alt={'position'} width={25} height={25} />
               <p>
                 <strong>Самара</strong>
-                <span className={styles.text}>Стара Загора 27</span>
+                <span>, Стара Загора, 27</span>
               </p>
             </div>
             <div className={styles.phone}>

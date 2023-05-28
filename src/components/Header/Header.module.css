@@ -1,3 +1,7 @@
+.header-wrapper {
+  margin: 10px auto 40px;
+}
+
 .header {
   width: 100%;
 }
@@ -28,6 +32,7 @@
 .address p,
 .phone p {
   padding: 0 0 0 10px;
+  margin: 0;
 }
 
 .phone a {
@@ -35,12 +40,25 @@
   text-decoration: none;
 }
 
-.text {
-  display: block;
+@media screen and (max-width: 768px) {
+  .phone,
+  .address {
+    margin: 0;
+  }
+
+  .phone a,
+  .address p {
+    font-size: 1.4rem;
+  }
+
+  .address {
+    margin-bottom: 10px;
+  }
 }
 
 .menu {
   display: flex;
+  margin-top: 20px;
   text-align: left;
 }
 
@@ -65,11 +83,17 @@
   border-radius: 25px;
 }
 
+@media screen and (max-width: 768px) {
+  .link {
+    font-size: 1.8rem;
+  }
+}
+
 .link::before {
   position: absolute;
-  bottom: 5px;
-  left: 15%;
-  width: 70%;
+  bottom: 7px;
+  left: 30%;
+  width: 40%;
   height: 2px;
   content: '';
   background: #18272f;

@@ -4,8 +4,11 @@ import { Navigation, Scrollbar } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import styles from '@/components/Reviews/Reviews.module.css';
+import useElementOnScreen from '@/hooks/useElementOnScreen';
 
 export const Reviews = () => {
+  const { ref } = useElementOnScreen();
+
   const reviews = [
     { image: '/review4.jpg' },
     { image: '/review5.jpg' },
@@ -17,8 +20,10 @@ export const Reviews = () => {
   ];
 
   return (
-    <section className="container">
-      <h2 className={styles.h2}>Отзывы</h2>
+    <section className="container" ref={ref}>
+      <h2 className={cn('h1', styles.h2, 'invisible-child')} data-child>
+        Отзывы
+      </h2>
       <Swiper
         centeredSlides={true}
         modules={[Navigation, Scrollbar]}
@@ -28,7 +33,7 @@ export const Reviews = () => {
           nextEl: '.next',
           prevEl: '.prev',
         }}
-        className={styles.slider}
+        className="invisible-child"
         loop={true}
         breakpoints={{
           768: {
@@ -46,9 +51,10 @@ export const Reviews = () => {
           delay: 2000,
           disableOnInteraction: true,
         }}
+        data-child
       >
         {reviews.map((review, index) => (
-          <SwiperSlide className={styles.slider} key={index}>
+          <SwiperSlide key={index}>
             <div className={styles.review}>
               <Image
                 className={styles.image}

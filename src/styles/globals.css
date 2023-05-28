@@ -15,6 +15,11 @@ a {
     sans-serif;
   font-size: 1.6rem;
   line-height: 1.2;
+  color: #353432;
+}
+
+body {
+  margin: 0;
 }
 
 li {
@@ -31,27 +36,45 @@ html {
 }
 
 main {
-  margin: 0 0 150px;
+  margin: 0;
 }
 
 .h1 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .h2 {
-  font-size: 1.5rem;
+  font-size: 2.4rem;
 }
 
 .h3 {
-  font-size: 1rem;
+  font-size: 2rem;
 }
 
 .h4 {
-  font-size: .8rem;
+  font-size: 1.8rem;
+}
+
+@media screen and (max-width: 768px) {
+  .h1 {
+    font-size: 2.4rem;
+  }
+
+  .h2 {
+    font-size: 2rem;
+  }
+
+  .h3 {
+    font-size: 1.8rem;
+  }
+
+  .h4 {
+    font-size: 1.6rem;
+  }
 }
 
 .p {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .bold {
@@ -75,6 +98,12 @@ main {
   margin: 0 auto 100px;
 }
 
+@media screen and (max-width: 768px) {
+  .container {
+    margin-bottom: 50px;
+  }
+}
+
 .hero {
   opacity: 0;
   animation: fade-in 1s ease-in-out forwards;
@@ -93,6 +122,52 @@ main {
   transform-origin: center;
   animation: flip-animation 12s linear infinite, fade-in 1s ease-in-out forwards;
   transform-style: preserve-3d;
+}
+
+.invisible-child {
+  opacity: 0;
+  transition: transform ease-in .5s, opacity ease-in .8s;
+  transform: translateY(40%);
+}
+
+.invisible-child:nth-child(1) {
+  transition-delay: 100ms;
+}
+
+.invisible-child:nth-child(2) {
+  transition-delay: 300ms;
+}
+
+.invisible-child:nth-child(3) {
+  transition-delay: 500ms;
+}
+
+.invisible-child:nth-child(4) {
+  transition-delay: 700ms;
+}
+
+.invisible-child:nth-child(5) {
+  transition-delay: 900ms;
+}
+
+.invisible-child:nth-child(6) {
+  transition-delay: 1100ms;
+}
+
+.invisible-child:nth-child(7) {
+  transition-delay: 1300ms;
+}
+
+.invisible-child:nth-child(8) {
+  transition-delay: 1500ms;
+}
+
+.slide-in {
+  transform: translateY(0);
+}
+
+.fade-in {
+  opacity: 1;
 }
 
 @keyframes flip-animation {

@@ -1,6 +1,4 @@
-import { PortableText } from '@portabletext/react';
 import Head from 'next/head';
-import Image from 'next/image';
 
 import { client } from '@/lib/client';
 import { urlFor } from '@/lib/client';
@@ -9,14 +7,14 @@ import styles from './post.module.css';
 
 export interface IPost {
   _id: string;
-  slug: {
+  slug?: {
     current: string;
   };
   mainImage: {
     caption: string;
   };
   title: string;
-  body: any;
+  body: string;
   publishedAt: string;
   description: string;
 }

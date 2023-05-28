@@ -4,6 +4,7 @@ import { A11y, EffectCube } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { IMenu, Menu } from '@/components/Menu/Menu';
+import useElementOnScreen from '@/hooks/useElementOnScreen';
 import { client } from '@/lib/client';
 
 const images = [
@@ -17,6 +18,8 @@ interface IProps {
 }
 
 export default function MenuPage({ menu }: IProps) {
+  const { ref } = useElementOnScreen();
+
   return (
     <>
       <Head>
@@ -25,8 +28,14 @@ export default function MenuPage({ menu }: IProps) {
       <h1 className="visually-hidden">Unie espresso bar</h1>
       <h2 className="visually-hidden">Первый эспрессо бар в Самаре</h2>
 
-      <section className="menu container">
-        <Swiper modules={[A11y, EffectCube]} pagination={{ clickable: true }} scrollbar={{ draggable: true }}>
+      <section className="menu container" ref={ref}>
+        <Swiper
+          className="invisible-child"
+          modules={[A11y, EffectCube]}
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          data-child
+        >
           {images.map(({ src, w, h }, index) => (
             <SwiperSlide key={index}>
               <Image className="" src={src} alt="menu" width={w} height={h} />

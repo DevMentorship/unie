@@ -1,5 +1,7 @@
 import Head from 'next/head';
 
+import { PostsCarousel } from '@/components/PostsCarousel/PostsCarousel';
+
 import { Cards, INews } from '../components/Cards/Cards';
 import { client } from '../lib/client';
 import type { IPost } from './post/[slug]';
@@ -14,18 +16,7 @@ const Posts = ({ posts, news }: IProps) => (
     <Head>
       <title>Unie - Новости</title>
     </Head>
-    <section className="container">
-      {posts.map((post) => (
-        <div key={post._id}>
-          <h2>{post.title}</h2>
-          <p>{post.publishedAt}</p>
-          <p>{post.description}</p>
-          {/* <Link href={`/post/${post.slug.current}`}>
-            <span>Подробнее</span>
-          </Link> */}
-        </div>
-      ))}
-    </section>
+    <PostsCarousel posts={posts} />
     <Cards news={news} />
   </>
 );
@@ -34,7 +25,7 @@ export default Posts;
 
 export const getStaticProps = async () => {
   const query = `{
-    "posts": *[_type == "post"] | order(publishedAt desc)  {_id, publishedAt, title, description, mainImage, slug},
+    "posts": *[_type == "post"],
     "news": *[_type == "news"] | order(number asc) {_id, title, mainImage}
   }`;
 
