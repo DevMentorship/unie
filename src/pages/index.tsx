@@ -8,7 +8,6 @@ import { Team } from '@/components/Team/Team';
 import { client } from '@/lib/client';
 
 export default function Home({ hero, reviews }: { hero: IHero[]; reviews: string[] }) {
-  console.log(reviews);
   return (
     <>
       <Head>

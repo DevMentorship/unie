@@ -27,14 +27,12 @@ export const Menu = ({ menu }: { menu: IMenu[] }) => (
             <div className={styles.block1}>
               <h3>{name}</h3>
               <h4 className={styles.h4}>{description}</h4>
-              <h4 className={styles.h4}>
-                Белки: {27}г | Жиры: {12}г | Углеводы: {10}г
-              </h4>
+              <h4 className={styles.h4}>Белки: 27г | Жиры: 12г | Углеводы: 10г</h4>
               <h4 className={styles.h4}>Калорийность: 281 ккал</h4>
             </div>
             <div className={styles.block2}>
-              <h4 className={cn(styles.gramms, styles.h4)}>{180}г</h4>
-              <h3 className={styles.h3}>{290}p.</h3>
+              <h4 className={cn(styles.gramms, styles.h4)}>180г</h4>
+              <h3 className={styles.h3}>290p.</h3>
             </div>
           </div>
         </div>
