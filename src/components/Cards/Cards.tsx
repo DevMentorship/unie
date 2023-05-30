@@ -1,3 +1,4 @@
+import cn from 'classnames';
 import Image from 'next/image';
 
 import styles from '@/components/Cards/Cards.module.css';
@@ -44,7 +45,7 @@ export const Cards = () => {
 
       <div className={styles.cards}>
         {cards.map(({ image, title }, index) => (
-          <div key={index} className={styles.card}>
+          <div key={index} className={cn(styles.card, 'invisible-child')} data-child>
             <Image className={styles.image} src={`/${image}.jpg`} alt={image} width={230} height={350} />
             <div className={styles.inner}>
               <h3 className={styles.h3}>{title}</h3>
