@@ -88,18 +88,18 @@ export const Team = () => {
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <div className={styles.image}>
-              <Image src={slide.photo} alt={slide.name} width={270} height={360} />
+              <Image src={slide.photo} alt={slide.name} width={276} height={362} />
             </div>
 
             <div className={styles.info}>
-              <h4 className={styles.name}>{slide.name}</h4>
+              <h3 className={styles.name}>{slide.name}</h3>
 
               <div className={styles.socials}>
-                <button className={styles.icons}>
+                <button className={styles.icons} aria-label="Перейти на страницу в VK">
                   <Image src="/vk.svg" className={styles.button} alt={''} width={40} height={40} />
                 </button>
 
-                <button className={styles.icons}>
+                <button className={styles.icons} aria-label="Перейти на страницу в Instagram">
                   <Image src="/instagram.svg" className={styles.button} alt={''} width={40} height={40} />
                 </button>
               </div>
@@ -109,12 +109,12 @@ export const Team = () => {
           </SwiperSlide>
         ))}
         <div className={styles.buttons}>
-          <button className={cn(styles.prev, 'prev')}>
+          <button className={cn(styles.prev, 'prev')} aria-label="Кнопка Предыдущий участник команды">
             <span className="visually-hidden">Prev Slide</span>
             <Image src="/arrow.svg" alt="prev arrow" width={30} height={30} />
           </button>
 
-          <button className={cn(styles.next, 'next')}>
+          <button className={cn(styles.next, 'next')} aria-label="Кнопка Следующий участник команды">
             <span className="visually-hidden">Next Slide</span>
             <Image src="/arrow.svg" alt="next arrow" width={30} height={30} />
           </button>

@@ -35,11 +35,11 @@ export const Footer = () => {
             </ul>
           </nav>
           <div className={styles.socials}>
-            <button className={styles.icons}>
+            <button className={styles.icons} aria-label="Перейти на страницу в Instagram">
               <Image className={styles.image} src={'/instagram.svg'} alt={'socials'} width={40} height={40} />
             </button>
 
-            <button className={styles.icons}>
+            <button className={styles.icons} aria-label="Перейти на страницу в VK">
               <Image className={styles.image} src={'/vk.svg'} alt={'socials'} width={40} height={40} />
             </button>
           </div>

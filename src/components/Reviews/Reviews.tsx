@@ -69,12 +69,12 @@ export const Reviews = () => {
           </SwiperSlide>
         ))}
         <div className={styles.buttons}>
-          <button className={cn(styles.prev, 'prev')}>
+          <button className={cn(styles.prev, 'prev')} aria-label="Кнопка Предыдущий отзыв">
             <span className="visually-hidden">Prev Slide</span>
             <Image src="/arrow.svg" alt="prev arrow" width={30} height={30} />
           </button>
 
-          <button className={cn(styles.next, 'next')}>
+          <button className={cn(styles.next, 'next')} aria-label="Кнопка Следующий отзыв">
             <span className="visually-hidden">Next Slide</span>
             <Image src="/arrow.svg" alt="next arrow" width={30} height={30} />
           </button>
