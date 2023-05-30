@@ -1,8 +1,8 @@
 import Head from 'next/head';
-
 import Image from 'next/image';
 import { A11y, EffectCube } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 import { IMenu, Menu } from '@/components/Menu/Menu';
 import useElementOnScreen from '@/hooks/useElementOnScreen';
 import { client } from '@/lib/client';
