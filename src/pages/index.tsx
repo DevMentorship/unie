@@ -3,11 +3,11 @@ import Head from 'next/head';
 import { Advantages } from '@/components/Advantages/Advantages';
 import { Contacts } from '@/components/Contacts/Contacts';
 import { Hero, IHero } from '@/components/Hero/Hero';
-import { Reviews } from '@/components/Reviews/Reviews';
+import { IReviews, Reviews } from '@/components/Reviews/Reviews';
 import { Team } from '@/components/Team/Team';
 import { client } from '@/lib/client';
 
-export default function Home({ hero }: { hero: IHero[] }) {
+export default function Home({ hero, reviews }: { hero: IHero[]; reviews: IReviews[] }) {
   return (
     <>
       <Head>
@@ -21,17 +21,18 @@ export default function Home({ hero }: { hero: IHero[] }) {
 
       <Contacts />
       <Team />
-      <Reviews />
+      <Reviews reviews={reviews} />
     </>
   );
 }
 
 export const getStaticProps = async () => {
   const query = `{
-    "hero": *[_type == "hero"]
+    "hero": *[_type == "hero"],
+    "reviews": *[_type == "reviews"]
   }`;
 
-  const { hero }: { hero: IHero[] } = await client.fetch(query);
+  const { hero, reviews }: { hero: IHero[]; reviews: IReviews[] } = await client.fetch(query);
 
-  return { props: { hero } };
+  return { props: { hero, reviews } };
 };
