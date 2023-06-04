@@ -5,19 +5,15 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import styles from '@/components/Reviews/Reviews.module.css';
 import useElementOnScreen from '@/hooks/useElementOnScreen';
+import { urlFor } from '@/lib/client';
 
-export const Reviews = () => {
+export interface IReviews {
+  image: string;
+  review: string;
+}
+
+export const Reviews = ({ reviews }: { reviews: IReviews[] }) => {
   const { ref } = useElementOnScreen();
-
-  const reviews = [
-    { image: '/review4.jpg' },
-    { image: '/review5.jpg' },
-    { image: '/review2.jpg' },
-    { image: '/review5.jpg' },
-    { image: '/review4.jpg' },
-    { image: '/review5.jpg' },
-    { image: '/review2.jpg' },
-  ];
 
   return (
     <section className="container" ref={ref}>
@@ -58,8 +54,8 @@ export const Reviews = () => {
             <div className={styles.review}>
               <Image
                 className={styles.image}
-                src={review.image}
-                alt={review.image}
+                src={urlFor(review.image).url()}
+                alt={review.review}
                 width={0}
                 height={0}
                 sizes="100vw"
